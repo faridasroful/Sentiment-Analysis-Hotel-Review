@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sentiment Analysis of Hotel Review</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Sentiment Analysis of Hotel Review">
+    <meta name="description" content="Sentiment Analysis of Hotel Review">
+    
+    <link rel="icon" type="image/png" href="" />
+    
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}"> -->
+	<style type="text/css">
+		.btn {
+  font-size: 1.2em;
+  border-radius: 5px;
+  padding: 12px 30px;
+  background: #7c0cd1;
+  text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.card-header{
+    width:100%;
+	color:#de9815;
+    border-bottom:3px solid #BBB;
+    
+    font-family: 'Roboto', sans-serif;
+    padding:10px;
+    text-align: center;
+    margin-top:0px;
+    overflow:hidden;
+    -webkit-transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+}
+
+.card {
+    background:#FFF;
+    display: block;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    float: none;
+    display: flex;
+    border:1px solid #AAA;
+    border-bottom:3px solid #BBB;
+    padding:10px;
+    margin-top:5em;
+    overflow:hidden;
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-family: 'Roboto', sans-serif;
+    -webkit-transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.card-body{
+ margin:1em;   
+}
+	</style>
+</head>
+<body>
+
+	<header>
+		
+	
+
+
+<div class="jumbotron jumbotron-fluid p-y-3">
+      <div class="container text-xs-center text-white">
+        
+        <h1 class="display-1 card-header" align="center" style="color:#2196F3;">Hotel Review Sentiment Analysis  </h1>
+        <p class="lead" align="center"> Type your word or sentence below to check sentimen analysis of hotel services in Jakarta.  </p>
+        <center><a href="https://github.com/faridasroful/Sentiment-Analysis-Hotel-Review" target="_blank" title="View code at Github"> <ion-icon name="logo-github" size="large"></ion-icon></a></center>
+        
+      </div>
+    </div>
+
+
+
+
+
+</header>
+
+
+	<div class="container">
+<div class="well">
+		<form action="{{ url_for('predict')}}" method="POST" align="center">
+		<p class="lead" align="center">Enter Your Text Here :</p>
+		
+		<center><textarea name="message" rows="7" cols="60" placeholder="Try: the food and drink is very delicious " required="required"></textarea></center>
+		<br/>
+
+		<center><input type="submit" class="btn-info btn" value="Check this out" ></center>
+		
+	</form>
+		
+	</div>
+
+</div>
+<div class="container">
+
+
+  <div class="col-md-12" style="margin-bottom: 60px;">
+    <div class="card center">
+            <div class="card-content">
+              <div class="card-header">
+                   <h1 class="card-heading"> Project Detail</h1>
+              </div>
+              <div class="card-body">
+                <p class="card-p">
+                        The project was inspired by  <a href="https://github.com/maladeep/sms-spam-ham-detector" target="_blank">Maladeep</a>
+                  <div class="col-md-1">
+
+                  </div>
+                  <div class="col-md-6">
+                    <b>Technology Used:  </b>
+                    <ol>                          
+                    <li>Language
+                      <ol type="a">
+                        <li>Python</li>
+                        <li>HTML </li>
+                        <li>CSS </li>
+                        <li>Bootstrap</li>
+                      </ol>
+                    </li>
+                    <li>Libraries
+                      <ol type="a">
+                        <li>Flask</li>
+                        <li>Sklearn </li>
+                        <li>Pandas </li>
+                        <li>Numpy </li>
+                        <li>Nltk </li>
+                        <li>String</li>
+                        <li>Re</li>
+                        <li>Mathplotlib </li>
+                      </ol>
+                    </li>
+                    
+                  </ol>
+
+                  </div>
+
+                  <div class="col-md-5">
+                  <b> Action Performed</b>
+                    <ol>                            
+                    <li>EDA</li>
+                    <li>Visualizing Word Clouds </li>
+                    <li>Feature Extraction from Text</li>
+                    <li>Visualize Confusion Matrix</li>
+                    <li>Algorithms Used
+                      <ol type="a">
+                        <li >Bagging Classification</li>
+                        <li>Random Forest Classification </li>
+                        <li>Extra Tree Classification </li>
+                        <li>Naive Bayes classification</li>
+                        <li>Decision tree Classification</li>
+                        <li>KNeighbors Classification</li>
+                        <li>SVM Classification</li> 
+                      </ol>
+                    </li>
+                    
+                    </ol>
+                  </div>
+                  <i>Based on accuracy, Naive Bayes classification outperform all, Thus this model is based on Naive Bayes classification algorithm.</i>     
+                </p>
+              </div>
+              
+                          
+
+                
+            </div>
+        </div>
+    </div>
+
+
+	<script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+	
+
+</body>
+</html>
